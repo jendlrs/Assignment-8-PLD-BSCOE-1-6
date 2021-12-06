@@ -19,7 +19,12 @@ def lottery():
             if first_ >9 or first_ <=-1:
                 print ("Make sure that your number is ranging 0 to 9.") 
                 continue #if the user enters a number that is greater than 9 or a negative number, it will ask for 1st number again.
-            else:
-                return first_
+            while True:
+                second_ = int (input("Enter second number: "))
+                if second_ >9 or second_ <=-1:
+                    print ("Make sure that your number is ranging 0 to 9.")
+                else:
+                    return first_, second_
 
-first = lottery()
+
+first, second_ = lottery()
