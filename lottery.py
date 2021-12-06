@@ -50,6 +50,11 @@ def lottery():
             for i in luckynumbers:
                 if (i== first_ or i == second_) or i== third_:
                     match= match +1 #match is incremented by 1
+            if match == 3:
+                print (f"The winning numbers are {luckynumbers}. \nCongratulations! You won!")
+            else:
+                print (f"You Loss. The winning numbers are {luckynumbers}")
+                break
             
         except ValueError:
             print ("Invalid Input! Make sure to enter numbers only.")
