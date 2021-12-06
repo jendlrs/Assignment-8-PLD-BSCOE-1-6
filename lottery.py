@@ -44,7 +44,12 @@ def lottery():
             
             user_input = first_, second_, third_
             print (f"The numbers you entered are {user_input}")
-            break
+            
+            match = 0 
+
+            for i in luckynumbers:
+                if (i== first_ or i == second_) or i== third_:
+                    match= match +1 #match is incremented by 1
             
         except ValueError:
             print ("Invalid Input! Make sure to enter numbers only.")
