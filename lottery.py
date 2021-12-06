@@ -54,7 +54,12 @@ def lottery():
                 print (f"The winning numbers are {luckynumbers}. \nCongratulations! You won!")
             else:
                 print (f"You Loss. The winning numbers are {luckynumbers}")
-                break
+                ready =input ("Do you want to try again? y/n ")
+                if ready == "y":
+                    continue
+                else:
+                    print ("Thank you for using Jensen's Lottery!")
+                    break
             
         except ValueError:
             print ("Invalid Input! Make sure to enter numbers only.")
