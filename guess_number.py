@@ -7,7 +7,11 @@
 import random
 
 def guess_number ():
-    number = random.randrange(0,100)
-    print (number)
+    number_ = random.randrange(0,100)
+    while True:
+        user_guess = int(input("What is your guess? "))
+        if user_guess == number_:
+            print (f"Congratulations! You got it right. The number is {number_}.")
+            break
 
 guess_number()
