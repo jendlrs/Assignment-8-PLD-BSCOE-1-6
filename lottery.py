@@ -10,6 +10,11 @@
 #if “n” the program will exit.
 
 import random
+print ("\nWelcome to Jensen's Lottery!")
+name= input ("\nWhat is your name? ")
+print (f"\nHi {name}! Are you feeling lucky today? This lottery system will ask you to enter three (3) numbers ranging from zero (0) to nine (9).")
+print ("\nThen the system will automatically generate three (3) lucky numbers.")
+print ("\nIf the three (3) lucky numbers match all of your numbers, you are a winner.")
 
 def lottery():
     while True:
@@ -58,7 +63,7 @@ def lottery():
                 if ready == "y":
                     continue
                 else:
-                    print ("\nThank you for using Jensen's Lottery!\n")
+                    print ("\nThank you for using Jensen's Lottery!\n") #Exit
                     break
             
         except ValueError:
@@ -67,6 +72,6 @@ def lottery():
             if ready == 'y':
                 continue
             else:
-                print ("\nThank you for using Jensen's lottery.\n")
+                print ("\nThank you for using Jensen's lottery.\n") #Exit
 
 lottery()
