@@ -6,6 +6,10 @@
 #Repeat asking the user until the random number has been guessed correctly.
 import random
 
+print ("\nWelcome to Number Guessing Game")
+name = input ("\nWhat is your name? ")
+print (f"Hi {name}! This game will generate one mystery number that you will have to guess.")
+
 def guess_number ():
     number_ = random.randrange(0,100)
     while True:
