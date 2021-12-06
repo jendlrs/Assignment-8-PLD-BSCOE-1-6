@@ -13,5 +13,8 @@ def guess_number ():
         if user_guess == number_:
             print (f"Congratulations! You got it right. The number is {number_}.")
             break
+        elif user_guess > number_:
+            print ("WRONG")
+            print ("Hint: Your input is GREATER THAN the random number to be guess.")
 
 guess_number()
