@@ -28,16 +28,24 @@ def lottery():
                     elif first_ == second_ :
                         print ("You already picked that number")
                         continue
-                    while True:
-                        third_ = int (input("Enter your third number: "))
-                        if third_ >9 or third_ <=1:
-                            print ("Make sure that your number is ranging 0 to 9.")
-                            continue
-                        elif third_ == second_ or third_ == first_:
-                            print ("You already picked that number")
-                            continue
-                        else:
-                            return first_, second_, third_
+                    else:
+                        break
+                while True:
+                    third_ = int (input("Enter your third number: "))
+                    if third_ >9 or third_ <=1:
+                        print ("Make sure that your number is ranging 0 to 9.")
+                        continue
+                    elif third_ == second_ or third_ == first_:
+                        print ("You already picked that number")
+                        continue
+                    else:
+                        break
+                break
+            
+            user_input = first_, second_, third_
+            print (f"The numbers you entered are {user_input}")
+            break
+            
         except ValueError:
             print ("Invalid Input! Make sure to enter numbers only.")
             ready = input ("Do you want to try again? y/n ")
@@ -46,4 +54,4 @@ def lottery():
             else:
                 print ("Thank you for playing Jensen's lottery.")
 
-first, second, third = lottery()
+lottery()
