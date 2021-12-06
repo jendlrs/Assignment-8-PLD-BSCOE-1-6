@@ -9,12 +9,15 @@ import random
 def guess_number ():
     number_ = random.randrange(0,100)
     while True:
-        user_guess = int(input("What is your guess? "))
+        user_guess = int(input("\nWhat is your guess? "))
         if user_guess == number_:
-            print (f"Congratulations! You got it right. The number is {number_}.")
+            print (f"\nCongratulations! You got it right. The correct number is {number_}.")
             break
         elif user_guess > number_:
-            print ("WRONG")
+            print ("\nWRONG")
             print ("Hint: Your input is GREATER THAN the random number to be guess.")
+        else:
+            print ("\nWRONG")
+            print ("Hint: Your input is LESS THAN the number to be guess.")
 
 guess_number()
