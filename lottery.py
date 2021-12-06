@@ -24,10 +24,18 @@ def lottery():
                     second_ = int (input("Enter your second number: "))
                     if second_ >9 or second_ <=-1:
                         print ("Make sure that your number is ranging 0 to 9.")
+                        continue
+                    elif first_ == second_ :
+                        print ("You already picked that number")
+                        continue
                     while True:
                         third_ = int (input("Enter your third number: "))
                         if third_ >9 or third_ <=1:
                             print ("Make sure that your number is ranging 0 to 9.")
+                            continue
+                        elif third_ == second_ or third_ == first_:
+                            print ("You already picked that number")
+                            continue
                         else:
                             return first_, second_, third_
         except ValueError:
